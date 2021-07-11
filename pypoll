@@ -1,0 +1,49 @@
+#import dependency
+import os
+import csv
+csvpath = os.path.join("/Users/rogeralbarran/Desktop/Python-challenges/Pypoll/election_data.csv")
+
+# List of variables
+total_votes = 0 
+correy_votes = 0
+khan_votes = 0
+li_votes = 0
+otooley_votes = 0
+
+# Empty list
+unique_name1 = []
+
+# Empty Dictionary
+vote_dict = {}
+
+#read file
+with open(csvpath)as election_data:
+    reader = csv.reader(election_data)
+    header = next(reader)
+    for row in reader:
+        total_votes = total_votes + 1
+        candidates = row[2]
+        if candidates not in unique_name1:
+            unique_name1.append(candidates)
+            vote_dict[candidates] = 0
+        vote_dict[candidates] = vote_dict[candidates] + 1 
+            
+#total votes for each candidate and percentage
+
+vote_dict["Khan"]
+
+vote_dict["Khan"]/total_votes
+
+vote_dict["Correy"]
+
+vote_dict["Correy"]/total_votes
+
+vote_dict["Li"]
+
+vote_dict["Li"]/total_votes
+
+vote_dict["otooley"]
+
+vote_dict["otooley"]/total_votes
+
+Winner Khan
